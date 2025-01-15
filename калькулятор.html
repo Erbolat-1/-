@@ -12,6 +12,60 @@
             <img src="images/logo.png" alt="Логотип">
             <h1>Департамент Пограничной Службы Республики Казахстан по ЗКО</h1>
             <h2>Учебный центр "Орал"</h2>
+           <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .calendar-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        input[type="date"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Календарь с датой 180 дней назад</h1>
+    <div class="calendar-container">
+        <input type="date" id="calendar" />
+        <button onclick="setDate180DaysAgo()">Показать 180 дней назад</button>
+    </div>
+
+    <script>
+        // Установить текущую дату в календарь при загрузке страницы
+        document.addEventListener("DOMContentLoaded", function() {
+            const calendar = document.getElementById("calendar");
+            const today = new Date();
+            calendar.value = today.toISOString().split('T')[0];
+        });
+
+        // Функция для вычисления даты 180 дней назад
+        function setDate180DaysAgo() {
+            const calendar = document.getElementById("calendar");
+            const today = new Date();
+            const pastDate = new Date(today);
+            pastDate.setDate(today.getDate() - 180);
+            calendar.value = pastDate.toISOString().split('T')[0];
+        }
+    </script>
+</body>
+</html>
         </div>
         <h2>Калькулятор расчета дней пребывания иностранных граждан в РК</h2>
         <div id="date-container">
