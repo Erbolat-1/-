@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор пребывания</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип">
+            <h1>Департамент Пограничной Службы Республики Казахстан по ЗКО</h1>
+            <h2>Учебный центр "Орал"</h2>
+        </div>
+        <h2>Калькулятор расчета дней пребывания иностранных граждан в РК</h2>
+        <div id="date-container">
+            <div class="date-group">
+                <input type="date" class="entry-date" placeholder="Дата въезда">
+                <input type="date" class="exit-date" placeholder="Дата выезда">
+                <span class="result-box">0</span>
+                <button class="remove">-</button>
+            </div>
+        </div>
+        <button id="add-date" class="add-button">Добавить въезд/выезд</button>
+        <div class="actions">
+            <button id="calculate">Рассчитать</button>
+            <button id="reset" class="reset">Сброс</button>
+        </div>
+        <div class="total-days">
+            Общее количество дней: <span id="total-days">0</span>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
